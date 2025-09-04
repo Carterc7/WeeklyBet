@@ -1,0 +1,36 @@
+/* Custom styles for WeeklyBet */
+
+/* Smooth transitions for HTMX updates */
+.htmx-settling {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.htmx-request {
+    opacity: 0.9;
+}
+
+/* Custom button styles */
+.btn-primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+}
+
+.btn-secondary {
+    @apply bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+}
+
+/* Loading spinner for HTMX requests */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,48 @@
+{{define "content"}}
+<div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Welcome to WeeklyBet</h2>
+
+        <div class="mb-8">
+            <p class="text-gray-600 text-lg mb-4">
+                Your weekly betting platform built with Go and HTMX.
+                Experience real-time updates and interactive features.
+            </p>
+        </div>
+
+        <!-- HTMX Demo Section -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">HTMX Demo</h3>
+            <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                hx-get="/api/time"
+                hx-target="#time-display"
+                hx-swap="innerHTML"
+            >
+                Get Current Time
+            </button>
+            <div id="time-display" class="mt-4 text-gray-600">
+                Click the button to see HTMX in action!
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold text-blue-800 mb-2">Real-time Updates</h4>
+                <p class="text-blue-600">Experience live updates without page refreshes using HTMX.</p>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold text-green-800 mb-2">Fast & Efficient</h4>
+                <p class="text-green-600">Built with Go for high performance and low latency.</p>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold text-purple-800 mb-2">Modern UI</h4>
+                <p class="text-purple-600">Clean, responsive design with Tailwind CSS styling.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
